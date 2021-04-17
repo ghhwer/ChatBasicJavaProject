@@ -1,0 +1,18 @@
+Connections/Utils.java
+ Connections.Utils
+Connections/Client.java
+ Connections.Client
+Connections/ClientMain.java
+ Connections.ClientMain
+GUIs/ChatWindow.java
+ GUIs.ChatWindow
+Connections/Server.java
+ Connections.Server
+Models/Message.java
+ Models.Message
+Connections/ServerMain.java
+ Connections.ServerMain
+Mains/ClientEntrypoint.java
+ Mains.ClientEntrypoint
+GUIs/Login.java
+ GUIs.Login
