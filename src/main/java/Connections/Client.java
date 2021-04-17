@@ -51,13 +51,11 @@ public class Client {
 
         ois = new ObjectInputStream(socket.getInputStream());
         String encodedResponse = (String) ois.readObject();
-        System.out.println(encodedResponse);
         JSONObject response = parseB64Json(encodedResponse);
 
         ois.close();
         oos.close();
 
-        System.out.println("Client got response");
         return response;
     }
     public boolean sendNewMessage(String message) throws IOException, ClassNotFoundException {

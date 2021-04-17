@@ -37,7 +37,7 @@ public class Server {
         response.put("token", token);
         response.put("status", true);
         Users.add(newUser);
-        System.out.println("new user logged in: "+request.get("username"));
+        System.out.println("New user logged in: "+request.get("username"));
         return response;
     }
     public Boolean autenticate(JSONObject request){
@@ -87,7 +87,6 @@ public class Server {
         String command = (String) request.get("command");
         Boolean isAuth = autenticate(request);
         JSONObject response = new JSONObject();
-        System.out.println(isAuth);
         if(command.contains("authMe")){
             response = newUser(request);
         }
@@ -125,7 +124,6 @@ public class Server {
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             // Pega dados de entrada
             JSONObject request = getRequest(ois);
-            System.out.println(request);
             // Responde de acordo
             JSONObject response = processCommand(request);
             sendResponse(response, oos);
